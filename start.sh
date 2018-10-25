@@ -4,7 +4,8 @@ sudo apt install -f install
 sudo apt update
 sudo apt install -y python-dev python-setuptools
 sudo easy_install pip
-sudo pip install tensorflow-1.9.0rc0-cp27-cp27mu-linux_aarch64.whl
+#sudo pip install tensorflow-1.9.0rc0-cp27-cp27mu-linux_aarch64.whl
+sudo pip install --extra-index-url=https://developer.download.nvidia.com/compute/redist/jp33 tensorflow-gpu
 mkdir libs
 cd libs
 git clone https://github.com/tensorflow/models
@@ -42,8 +43,8 @@ sudo apt-get install -y libraw1394-11 libavcodec-ffmpeg56 \
         libavformat-ffmpeg56 libswscale-ffmpeg3 libswresample-ffmpeg1 \
         libavutil-ffmpeg54 libgtkmm-2.4-dev libglademm-2.4-dev \
         libgtkglextmm-x11-1.2-dev libusb-1.0-0
-tar xvf ~/flycapture.2.12.3.31_arm64.tar.gz -C ~/libs
-sudo sh ./libs/flycapture.2.12.3.31_arm64/flycap2-conf
+tar xvf ${pwd}/flycapture.2.12.3.31_arm64.tar.gz -C ~/libs
+sudo sh ${pwd}/libs/flycapture.2.12.3.31_arm64/flycap2-conf
 sudo apt install -y ros-kinetic-pointgrey-camera-driver
 cd ~
 sudo sh ~/jetson_clocks.sh
