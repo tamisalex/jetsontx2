@@ -3,7 +3,7 @@ pwd=$(pwd)
 sudo apt install -f install
 sudo apt update
 sudo apt install -y python-dev python-setuptools
-sudo easy_install -y pip
+sudo easy_install pip
 sudo pip install tensorflow-1.9.0rc0-cp27-cp27mu-linux_aarch64.whl
 mkdir libs
 cd libs
@@ -46,6 +46,6 @@ tar xvf ~/flycapture.2.12.3.31_arm64.tar.gz -C ~/libs
 sudo sh ./libs/flycapture.2.12.3.31_arm64/flycap2-conf
 sudo apt install -y ros-kinetic-pointgrey-camera-driver
 cd ~
-sudo jetson_clocks.sh
+sudo sh ~/jetson_clocks.sh
 sudo sysctl -w net.core.rmem_max=33554432 net.core.rmem_default=33554432
 sudo sysctl -w net.core.wmem_max=33554432 net.core.wmem_default=33554432
