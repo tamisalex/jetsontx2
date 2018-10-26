@@ -22,7 +22,7 @@ cd libs
 git clone https://github.com/cocodataset/cocoapi.git
 cd cocoapi/PythonAPI
 make
-cp -r pycocotools ~/libs/models/research/
+cp -r pycocotools ${pwd}/libs/models/research/
 cd ${pwd}/libs/models/research
 wget -O protobuf.zip https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-aarch_64.zip
 unzip protobuf.zip
