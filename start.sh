@@ -43,8 +43,11 @@ sudo apt-get install -y libraw1394-11 libavcodec-ffmpeg56 \
         libavformat-ffmpeg56 libswscale-ffmpeg3 libswresample-ffmpeg1 \
         libavutil-ffmpeg54 libgtkmm-2.4-dev libglademm-2.4-dev \
         libgtkglextmm-x11-1.2-dev libusb-1.0-0
-tar xvf ${pwd}/flycapture.2.12.3.31_arm64_xenial.tar.gz -C ~/libs
-sudo sh ${pwd}/libs/flycapture.2.12.3.31_arm64/flycap2-conf
+echo 'debug'
+echo ${pwd}
+sudo tar xvf ${pwd}/flycapture.2.13.3.31_arm64_xenial.tar.gz -C ${pwd}/libs
+stat ${pwd}/libs/flycapture.2.13.3.31_arm64/flycap2-conf
+sudo ${pwd}/libs/flycapture.2.13.3.31_arm64/flycap2-conf
 sudo apt install -y ros-kinetic-pointgrey-camera-driver
 cd ~
 sudo sh ~/jetson_clocks.sh
